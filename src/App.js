@@ -8,9 +8,9 @@ class App extends Component {
   state = {
     input: ' ',
     todos: [
-      { id: 0, text: ' 리액트 소개', checked: false },
-      { id: 1, text: ' 리액트 소개', checked: true },
-      { id: 2, text: ' 리액트 소개', checked: false }
+      { id: 0, text: ' 맥도날드', checked: false },
+      { id: 1, text: ' 한식', checked: false },
+      { id: 2, text: ' 중식', checked: false }
     ]
   }
 
