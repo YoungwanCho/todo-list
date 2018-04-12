@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
-import TodoListTemplate from './components/TodoListTemplate';
-import Form from './components/Form';
-import TodoItemList from './components/TodoItemList';
+import { Home, About } from '../pages/index.js';
+import TodoListTemplate from './TodoListTemplate';
+import Form from './Form';
+import TodoItemList from './TodoItemList';
 
-class App extends Component {
+class Todo extends Component {
   id = 3
   state = {
     input: ' ',
@@ -73,18 +74,20 @@ class App extends Component {
     } = this;
 
     return (
-      <TodoListTemplate form={(
-        <Form
-          value={input}
-          onKeyPress={handleKeyPress}
-          onChange={handleChange}
-          onCreate={handleCreate}
-        />
-      )}>
-        <TodoItemList todos={todos} onToggle={handleToggle} onRemove={handleRemove} />
-      </TodoListTemplate>
+      <div>
+        <TodoListTemplate form={(
+          <Form
+            value={input}
+            onKeyPress={handleKeyPress}
+            onChange={handleChange}
+            onCreate={handleCreate}
+          />
+        )}>
+          <TodoItemList todos={todos} onToggle={handleToggle} onRemove={handleRemove} />
+        </TodoListTemplate>
+      </div>
     );
   }
 }
 
-export default App;
+export default Todo;
