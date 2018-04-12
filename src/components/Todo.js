@@ -39,22 +39,22 @@ class Todo extends Component {
   //   }
   // }
 
-  // handleToggle = (id) => {
-  //   const { todos } = this.state;
+  handleToggle = (id) => {
+    const { todos } = this.state;
 
-  //   const index = todos.findIndex(todo => todo.id === id);
-  //   const selected = todos[index];
-  //   const nextTodos = [...todos];
+    const index = todos.findIndex(todo => todo.id === id);
+    const selected = todos[index];
+    const nextTodos = [...todos];
 
-  //   nextTodos[index] = {
-  //     ...selected,
-  //     checked: !selected.checked
-  //   };
+    nextTodos[index] = {
+      ...selected,
+      checked: !selected.checked
+    };
 
-  //   this.setState({
-  //     todos: nextTodos
-  //   });
-  // }
+    this.setState({
+      todos: nextTodos
+    });
+  }
 
   // handleRemove = (id) => {
   //   const {todos} = this.state;
