@@ -54,6 +54,7 @@ class Todo extends Component {
     this.setState({
       todos: nextTodos
     });
+    document.location = "/macdonald";
   }
 
   // handleRemove = (id) => {

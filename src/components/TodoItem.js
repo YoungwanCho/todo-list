@@ -7,7 +7,7 @@ class TodoItem extends Component {
 
         return (
             <div className="todo-item" onClick={() => onToggle(id)}>
-                <div className={`todo-text ${checked && 'checked'}`}>
+                <div className="todo-text">
                     <div>{text}</div>
                 </div>
             </div>
