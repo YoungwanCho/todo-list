@@ -1,0 +1,8 @@
+.Menu-Item {
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.15s;
+    user-select: none;
+}
