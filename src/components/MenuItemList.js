@@ -3,14 +3,15 @@ import MenuItem from './MenuItem';
 
 class MenuItemList extends Component {
     render() {
-        const { menus } = this.props;
+        const {menus} = this.props;
 
         const menuList = menus.map(
-            ({ id, text }, i) => (
+            ({ id, text, price }, i) => (
                 <MenuItem
                     key={i}
                     id={id}
                     text={text}
+                    price={price}
                 />
             )
         );
