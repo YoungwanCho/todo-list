@@ -24,11 +24,11 @@ class Counter extends Component {
 
     render() {
         return (
-            <form className="Menu-Counter">
+            <div className="Menu-Counter">
                 <button onClick={this.handleIncrease}>+</button>
-                <b1>{this.state.number}</b1>
+                <p>{this.state.number}</p>
                 <button onClick={this.handleDecrease}>-</button>
-            </form>
+            </div>
         );
     }
 }

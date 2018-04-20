@@ -6,8 +6,9 @@ class MenuItemList extends Component {
         const { menus } = this.props;
 
         const menuList = menus.map(
-            ({ id, text }) => (
+            ({ id, text }, i) => (
                 <MenuItem
+                    key={i}
                     id={id}
                     text={text}
                 />
