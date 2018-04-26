@@ -6,12 +6,13 @@ class MenuItemList extends Component {
         const {menus} = this.props;
 
         const menuList = menus.map(
-            ({ id, text, price }, i) => (
+            ({ id, text, price, number }, i) => (
                 <MenuItem
                     key={i}
                     id={id}
                     text={text}
                     price={price}
+                    number={number}
                 />
             )
         );
