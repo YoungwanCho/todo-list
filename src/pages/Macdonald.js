@@ -17,13 +17,19 @@ class Macdonald extends Component {
         ]
     }
 
+    handleOrderCompleted = () => {
+        document.location = "/ordercompleted";
+    };
+
     render() {
         const { menus } = this.state;
         return (
             <div>
                 <MenuItemTemplate />
                 <MenuItemList menus={menus} />
+                <button onClick={this.handleOrderCompleted}>주문완료</button>
             </div>
+            
         );
     }
 }

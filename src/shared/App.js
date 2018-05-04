@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
-import { Home, Macdonald } from '../pages/index.js';
+import { Home, Macdonald, OrderCompleted } from '../pages/index.js';
 import Todo from '../components/Todo';
 
 class App extends Component {
@@ -9,6 +9,7 @@ class App extends Component {
       <div>
         <Route exact path='/' component = {Todo} />
         <Route path="/macdonald" component={Macdonald} />
+        <Route path="/ordercompleted" component={OrderCompleted} />
       </div>
     );
   }
