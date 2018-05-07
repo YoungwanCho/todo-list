@@ -2,32 +2,13 @@ import React, { Component } from 'react';
 import './Counter.css';
 
 class Counter extends Component {
-    state = {
-        number: 0
-    }
-
-    handleIncrease = () => {
-        const { number } = this.state;
-
-        this.setState({
-            number: number + 1
-        });
-    }
-
-    handleDecrease = () => {
-        this.setState(
-            ({ number }) => ({
-                number: number - 1
-            })
-        );
-    }
-
     render() {
+        const {id, count, onIncrease, onDecrease} = this.props;
         return (
             <div className="Menu-Counter">
-                <button onClick={this.handleIncrease}>+</button>
-                <p>{this.state.number}</p>
-                <button onClick={this.handleDecrease}>-</button>
+                <button onClick={()=>onIncrease(id)}>+</button>
+                <p>{count}</p>
+                <button onClick={()=>onIncrease(id)}>-</button>
             </div>
         );
     }

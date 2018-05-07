@@ -3,15 +3,18 @@ import MenuItem from './MenuItem';
 
 class MenuItemList extends Component {
     render() {
-        const {menus} = this.props;
+        const {menus, onIncrease, onDecrease} = this.props;
 
         const menuList = menus.map(
-            ({ id, text, price }, i) => (
+            ({ id, text, price, count }, i) => (
                 <MenuItem
                     key={i}
                     id={id}
                     text={text}
                     price={price}
+                    count={count}
+                    onIncrease = {onIncrease}
+                    onDecrease = {onDecrease}
                 />
             )
         );
