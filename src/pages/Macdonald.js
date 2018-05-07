@@ -43,12 +43,17 @@ class Macdonald extends Component {
         this.setState({menus: nextMenus});
     }
 
+    HandleShowBill = () => {
+        document.location = "/Bill";
+    }
+
     render() {
         const { menus } = this.state;
         return (
             <div>
                 <MenuItemTemplate />
                 <MenuItemList menus={menus} onIncrease = {this.HandleIncreaseCount} onDecrease = {this.HandleDecreaseCount}/>
+                <button onClick = {this.HandleShowBill} >주문완료</button>
             </div>
         );
     }
